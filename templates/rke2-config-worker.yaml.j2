@@ -1,0 +1,6 @@
+server: https://{{ master_node }}:9345
+token: "{{ rke2_token }}"
+node-ip: {{ new_vm_ip }}
+node-name: {{ new_vm_ip }}
+labels:
+    "node-role.kubernetes.io/worker": ""

@@ -1,0 +1,61 @@
+- name: Main Playbook to run other playbooks
+  hosts: x.x.x.x ## Replace with your terraform server
+  gather_facts: no
+  become: yes
+  vars_prompt:
+    - name: master_node
+      prompt: "What Is IP Of Your Master Node"
+      private: no
+
+    - name: os_template
+      prompt: "Please Enter Your Template Name (e.g , redhat-terraform-tpl or Ubuntu-22.04)"
+      private: no
+
+    - name: vm_name
+      prompt: "Please Enter Your Virtual Machine Name"
+      private: no
+
+    - name: new_os_hostname
+      prompt: "Please Enter Your Hostname (e.g , plva123)"
+      private: no 
+
+    - name: new_vm_ip
+      prompt: "Please Enter Your IP Address"
+      private: no 
+
+    - name: new_vm_gateway
+      prompt: "Enter the gateway for the new VM"
+      private: no 
+
+    - name: new_vm_netmask
+      prompt: "Please Enter Your Netmask (e.g. , 24)"
+      private: no 
+
+    - name: new_vm_tags_for_backup
+      prompt: "Please Enter appropriate tag for Backup (daily-backup OR weekly-backup)"
+      private: no 
+
+    - name: new_vm_vlan
+      prompt: "Please Enter Your VLAN (For example 'VLAN 100')"
+      private: no
+
+    - name: cpu_core
+      prompt: "Virtual Machine CPU Core"
+      private: no
+
+    - name: cpu_socket
+      prompt: "Virtual Machine CPU Socket"
+      private: no
+
+    - name: ram
+      prompt: "Virtual Machine RAM (e.g. , 8192 or 4096)"
+      private: no
+
+  tasks:
+    - name: Trigger Terraform For Creating New Virtual Machine
+      include_tasks: create-new-vm.yaml
+
+    - name: Install RKE2-AGENT On New Virtual Machine
+      include_tasks: install-rke2.yaml
+
+- import_playbook: add-new-vm-to-k8s.yaml

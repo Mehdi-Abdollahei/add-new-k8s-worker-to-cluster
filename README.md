@@ -15,7 +15,8 @@ The goal is to **create a new virtual machine and join it to an existing RKE2 cl
 
 
 ## 📸 Architecture Diagram
-![Add-k8s-worker-github (1)](https://github.com/user-attachments/assets/a59bdd87-659a-4d13-9f14-4dda3d3c4f4d)
+![Add-k8s-worker-github (2)](https://github.com/user-attachments/assets/a7b5138b-3a68-4153-b909-0266f780e6ec)
+
 
 ## 🔁 Workflow Summary
 

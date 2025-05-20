@@ -1,0 +1,6 @@
+- name: Install RKE2-AGENT On New Worker Node
+  ansible.builtin.dnf:
+    name: rke2-agent
+    state: present
+    disable_gpg_check: true
+  delegate_to: "{{ new_vm_ip }}"

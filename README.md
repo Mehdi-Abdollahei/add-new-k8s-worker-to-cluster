@@ -11,7 +11,7 @@ This project fully automates the provisioning and configuration of a new **RKE2 
 
 ## 🧩 Project Overview
 
-The goal is to **create a new virtual machine and join it to an existing RKE2 cluster** as a worker node. The workflow is triggered from **AWX** and driven by **Survey input** (e.g. VM specs like name, IP, gateway, etc).
+The goal is to **create a new virtual machine and join it to an existing RKE2 cluster** as a worker node. The workflow is triggered from **AWX** and driven by **Survey input** (e.g. VM specs like name, IP, gateway, etc). Actually, you have **infrastructure scaling**. 
 
 
 ## 📸 Architecture Diagram

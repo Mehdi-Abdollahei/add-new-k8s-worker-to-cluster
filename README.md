@@ -49,7 +49,6 @@ The goal is to **create a new virtual machine and join it to an existing RKE2 cl
 | **AWX**          | Executes workflows with survey prompts   |
 | **GitLab**       | Stores Ansible playbooks                 |
 | **RKE2**         | Lightweight Kubernetes distribution      |
-| **Jinja2**       | Dynamically generates config files       |
 
 ---
 

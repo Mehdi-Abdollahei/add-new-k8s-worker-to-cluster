@@ -60,7 +60,7 @@ resource "vsphere_virtual_machine" "new_vm" {
   name             = var.vm_name
   resource_pool_id = data.vsphere_host.target_host.resource_pool_id
   datastore_id     = data.vsphere_datastore.ds.id
-  folder           = "Operation/Linux/Terraform"
+  folder           = "Path/to/PATH" #ًReplace the path where you want the new virtual machine to be located
   tags             = [data.vsphere_tag.backup_tag.id]
   guest_id         = data.vsphere_virtual_machine.template.guest_id
   firmware         = data.vsphere_virtual_machine.template.firmware

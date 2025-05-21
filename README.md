@@ -27,7 +27,7 @@ The goal is to **create a new virtual machine and join it to an existing RKE2 cl
    - Netmask
    - VLAN on ESXi
    - Master Node IP (for joining cluster)
-   - Backup Tag (optional)
+   - Backup Tag
 
 2. **Step 1**: `create-new-vm.yaml`
    - Triggers Terraform to create a new VM in vSphere
